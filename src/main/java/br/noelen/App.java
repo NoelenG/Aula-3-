@@ -5,13 +5,18 @@ package br.noelen;
  */
 public final class App {
     private App() {
+
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Stack stack = new Stack(3);
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
     }
 }
